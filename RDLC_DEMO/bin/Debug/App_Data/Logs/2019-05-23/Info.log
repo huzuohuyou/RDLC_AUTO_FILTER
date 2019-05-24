@@ -1,0 +1,200 @@
+ 发生时间：2019-05-23 17:14:40.2833
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1), c.codename,c.code,'当期' from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-23 17:14:40.4518
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1) fee, c.codename project,c.code,'当期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-23 17:14:40.5798
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1), c.codename,c.code,'当期' from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-23 17:14:40.7104
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1) fee, c.codename project,c.code,'当期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-23 17:34:31.5601
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'同期' age from twipd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                and a.sunext=b.sunext
+                and c.business='BASIC'
+                and c.bun='NU'
+                and a.nu=c.code
+                group by a.nu,sugbe,codename
+                union
+                select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'当期' age from twipd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                and a.sunext=b.sunext
+                and c.business='BASIC'
+                and c.bun='NU'
+                and a.nu=c.code
+                group by a.nu,sugbe，codename) t  
+
+ 发生时间：2019-05-23 17:34:32.3283
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1),a.nu,c.codename  Project,sugbe,'同期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe,codename
+                    union
+                    select sum(amt1),a.nu,c.codename  Project,sugbe,'当期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe，codename) t  
+
+ 发生时间：2019-05-23 17:34:32.5756
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'同期' age from twipd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                and a.sunext=b.sunext
+                and c.business='BASIC'
+                and c.bun='NU'
+                and a.nu=c.code
+                group by a.nu,sugbe,codename
+                union
+                select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'当期' age from twipd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                and a.sunext=b.sunext
+                and c.business='BASIC'
+                and c.bun='NU'
+                and a.nu=c.code
+                group by a.nu,sugbe，codename) t  
+
+ 发生时间：2019-05-23 17:34:32.7163
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1),a.nu,c.codename  Project,sugbe,'同期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe,codename
+                    union
+                    select sum(amt1),a.nu,c.codename  Project,sugbe,'当期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/23','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/23','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe，codename) t  
+

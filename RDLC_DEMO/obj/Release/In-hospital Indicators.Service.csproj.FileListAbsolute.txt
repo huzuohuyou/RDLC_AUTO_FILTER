@@ -1,0 +1,93 @@
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\In-hospital Indicators.Service.exe.config
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\In-hospital Indicators.Service.exe
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\In-hospital Indicators.Service.pdb
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.ReportViewer.Design.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.SqlServer.Types.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Newtonsoft.Json.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Oracle.ManagedDataAccess.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\SqlSugar.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\EnvDTE.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\stdole.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Microsoft.MSXML.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Newtonsoft.Json.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csprojAssemblyReference.cache
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.MainForm.resources
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Properties.Resources.resources
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csproj.GenerateResource.cache
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\RdlCompile.cache
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\RdlCompile.compiled
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csproj.CoreCompileInputs.cache
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csproj.CopyComplete
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.exe
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.pdb
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Controls Library.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Entity.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Proxy.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Win.Base.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Functions Library.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Controls Library.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Entity.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Proxy.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Framework.Win.Base.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Functions Library.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\App_Data\Logs\TextFile1.txt
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Configs\NLog.config
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Reports\ThirtyEight.rdlc
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Reports\WorkloadChangeandWeight.rdlc
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Reports\CurrentPeriod.rdlc
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Reports\收入同比.rdlc
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Elight.Infrastructure.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\NLog.dll
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\Elight.Infrastructure.pdb
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Release\NLog.xml
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.BaseFilterForm.resources
+D:\GitHub\RDLC_DEMO\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.Demo.resources

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WorkloadChangeandWeight" targetNamespace="http://tempuri.org/WorkloadChangeandWeight.xsd" xmlns:mstns="http://tempuri.org/WorkloadChangeandWeight.xsd" xmlns="http://tempuri.org/WorkloadChangeandWeight.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WorkloadChangeandWeight" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WorkloadChangeandWeight" msprop:Generator_UserDSName="WorkloadChangeandWeight">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Project" msprop:Generator_ColumnVarNameInTable="columnProject" msprop:Generator_ColumnPropNameInRow="Project" msprop:Generator_ColumnPropNameInTable="ProjectColumn" msprop:Generator_UserColumnName="Project" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentWorkload" msprop:Generator_ColumnVarNameInTable="columnCurrentWorkload" msprop:Generator_ColumnPropNameInRow="CurrentWorkload" msprop:Generator_ColumnPropNameInTable="CurrentWorkloadColumn" msprop:Generator_UserColumnName="CurrentWorkload" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentWeight" msprop:Generator_ColumnVarNameInTable="columnCurrentWeight" msprop:Generator_ColumnPropNameInRow="CurrentWeight" msprop:Generator_ColumnPropNameInTable="CurrentWeightColumn" msprop:Generator_UserColumnName="CurrentWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentFee" msprop:Generator_ColumnVarNameInTable="columnCurrentFee" msprop:Generator_ColumnPropNameInRow="CurrentFee" msprop:Generator_ColumnPropNameInTable="CurrentFeeColumn" msprop:Generator_UserColumnName="CurrentFee" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentProportion" msprop:Generator_ColumnVarNameInTable="columnCurrentProportion" msprop:Generator_ColumnPropNameInRow="CurrentProportion" msprop:Generator_ColumnPropNameInTable="CurrentProportionColumn" msprop:Generator_UserColumnName="CurrentProportion" type="xs:string" minOccurs="0" />
+              <xs:element name="PeriodWorkload" msprop:Generator_ColumnVarNameInTable="columnPeriodWorkload" msprop:Generator_ColumnPropNameInRow="PeriodWorkload" msprop:Generator_ColumnPropNameInTable="PeriodWorkloadColumn" msprop:Generator_UserColumnName="PeriodWorkload" type="xs:string" minOccurs="0" />
+              <xs:element name="PeriodWeight" msprop:Generator_ColumnVarNameInTable="columnPeriodWeight" msprop:Generator_ColumnPropNameInRow="PeriodWeight" msprop:Generator_ColumnPropNameInTable="PeriodWeightColumn" msprop:Generator_UserColumnName="PeriodWeight" type="xs:string" minOccurs="0" />
+              <xs:element name="PeriodFee" msprop:Generator_ColumnVarNameInTable="columnPeriodFee" msprop:Generator_ColumnPropNameInRow="PeriodFee" msprop:Generator_ColumnPropNameInTable="PeriodFeeColumn" msprop:Generator_UserColumnName="PeriodFee" type="xs:string" minOccurs="0" />
+              <xs:element name="PeriodProportion" msprop:Generator_ColumnVarNameInTable="columnPeriodProportion" msprop:Generator_ColumnPropNameInRow="PeriodProportion" msprop:Generator_ColumnPropNameInTable="PeriodProportionColumn" msprop:Generator_UserColumnName="PeriodProportion" type="xs:string" minOccurs="0" />
+              <xs:element name="WeightChage" msprop:Generator_ColumnVarNameInTable="columnWeightChage" msprop:Generator_ColumnPropNameInRow="WeightChage" msprop:Generator_ColumnPropNameInTable="WeightChageColumn" msprop:Generator_UserColumnName="WeightChage" type="xs:string" minOccurs="0" />
+              <xs:element name="FeeChage" msprop:Generator_ColumnVarNameInTable="columnFeeChage" msprop:Generator_ColumnPropNameInRow="FeeChage" msprop:Generator_ColumnPropNameInTable="FeeChageColumn" msprop:Generator_UserColumnName="FeeChage" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
