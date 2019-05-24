@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -82,6 +83,20 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_query = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
+            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,6 +124,13 @@
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // DataTable1BindingSource
@@ -118,15 +140,15 @@
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource10.Name = "DataSet1";
-            reportDataSource10.Value = this.DataTable1BindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource10);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "InhospitalIndicators.Service.Reports.CurrentPeriod.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 0);
             this.reportViewer2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(986, 402);
+            this.reportViewer2.Size = new System.Drawing.Size(984, 401);
             this.reportViewer2.TabIndex = 0;
             // 
             // splitContainer1
@@ -149,7 +171,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.reportViewer2);
-            this.splitContainer1.Size = new System.Drawing.Size(986, 495);
+            this.splitContainer1.Size = new System.Drawing.Size(984, 494);
             this.splitContainer1.SplitterDistance = 90;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
@@ -305,7 +327,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(998, 536);
+            this.tabControl1.Size = new System.Drawing.Size(996, 535);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -315,7 +337,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(990, 501);
+            this.tabPage1.Size = new System.Drawing.Size(988, 500);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "同期费用比";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -327,7 +349,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(990, 501);
+            this.tabPage2.Size = new System.Drawing.Size(988, 500);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "38项费用";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -352,7 +374,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.reportViewer1);
-            this.splitContainer2.Size = new System.Drawing.Size(986, 495);
+            this.splitContainer2.Size = new System.Drawing.Size(984, 494);
             this.splitContainer2.SplitterDistance = 90;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 3;
@@ -500,15 +522,15 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource11.Name = "DataSet1";
-            reportDataSource11.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InhospitalIndicators.Service.Reports.ThirtyEight.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(986, 402);
+            this.reportViewer1.Size = new System.Drawing.Size(984, 401);
             this.reportViewer1.TabIndex = 0;
             // 
             // tabPage3
@@ -518,7 +540,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(990, 501);
+            this.tabPage3.Size = new System.Drawing.Size(988, 500);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "检验项目比";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -543,7 +565,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.reportViewer3);
-            this.splitContainer3.Size = new System.Drawing.Size(986, 495);
+            this.splitContainer3.Size = new System.Drawing.Size(984, 494);
             this.splitContainer3.SplitterDistance = 90;
             this.splitContainer3.SplitterWidth = 3;
             this.splitContainer3.TabIndex = 4;
@@ -691,32 +713,32 @@
             // reportViewer3
             // 
             this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource12.Name = "DataSet1";
-            reportDataSource12.Value = this.DataTable1BindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.DataTable1BindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "InhospitalIndicators.Service.Reports.WorkloadChangeandWeight.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(0, 0);
             this.reportViewer3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.ServerReport.BearerToken = null;
-            this.reportViewer3.Size = new System.Drawing.Size(986, 402);
+            this.reportViewer3.Size = new System.Drawing.Size(984, 401);
             this.reportViewer3.TabIndex = 0;
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.splitContainer4);
             this.tabPage4.Location = new System.Drawing.Point(4, 31);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage4.Size = new System.Drawing.Size(990, 501);
+            this.tabPage4.Size = new System.Drawing.Size(988, 500);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "表8";
+            this.tabPage4.Text = "病理项目比";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(154, 200);
+            this.button3.Location = new System.Drawing.Point(685, 561);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 37);
             this.button3.TabIndex = 0;
@@ -736,10 +758,190 @@
             this.btn_query.UseVisualStyleBackColor = true;
             this.btn_query.Click += new System.EventHandler(this.button1_Click);
             // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer4.IsSplitterFixed = true;
+            this.splitContainer4.Location = new System.Drawing.Point(2, 3);
+            this.splitContainer4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.groupBox4);
+            this.splitContainer4.Panel1.Controls.Add(this.groupBox5);
+            this.splitContainer4.Panel1.Controls.Add(this.groupBox9);
+            this.splitContainer4.Panel1MinSize = 20;
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.reportViewer4);
+            this.splitContainer4.Size = new System.Drawing.Size(984, 494);
+            this.splitContainer4.SplitterDistance = 90;
+            this.splitContainer4.SplitterWidth = 3;
+            this.splitContainer4.TabIndex = 5;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton7);
+            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Controls.Add(this.radioButton9);
+            this.groupBox4.Location = new System.Drawing.Point(10, 10);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox4.Size = new System.Drawing.Size(239, 63);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "门诊/住院";
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(157, 23);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(77, 25);
+            this.radioButton7.TabIndex = 4;
+            this.radioButton7.Tag = "in";
+            this.radioButton7.Text = "住院";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Checked = true;
+            this.radioButton8.Location = new System.Drawing.Point(8, 23);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(77, 25);
+            this.radioButton8.TabIndex = 2;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Tag = "all";
+            this.radioButton8.Text = "全部";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(85, 23);
+            this.radioButton9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(77, 25);
+            this.radioButton9.TabIndex = 3;
+            this.radioButton9.Tag = "out";
+            this.radioButton9.Text = "门诊";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.dateTimePicker9);
+            this.groupBox5.Controls.Add(this.dateTimePicker10);
+            this.groupBox5.Location = new System.Drawing.Point(260, 10);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox5.Size = new System.Drawing.Size(352, 63);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "当期";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(161, 27);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 21);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "至";
+            // 
+            // dateTimePicker9
+            // 
+            this.dateTimePicker9.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker9.Location = new System.Drawing.Point(192, 22);
+            this.dateTimePicker9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dateTimePicker9.Name = "dateTimePicker9";
+            this.dateTimePicker9.Size = new System.Drawing.Size(140, 31);
+            this.dateTimePicker9.TabIndex = 5;
+            // 
+            // dateTimePicker10
+            // 
+            this.dateTimePicker10.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker10.Location = new System.Drawing.Point(18, 22);
+            this.dateTimePicker10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dateTimePicker10.Name = "dateTimePicker10";
+            this.dateTimePicker10.Size = new System.Drawing.Size(140, 31);
+            this.dateTimePicker10.TabIndex = 5;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label8);
+            this.groupBox9.Controls.Add(this.dateTimePicker11);
+            this.groupBox9.Controls.Add(this.dateTimePicker12);
+            this.groupBox9.Location = new System.Drawing.Point(621, 10);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 3, 7, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.groupBox9.Size = new System.Drawing.Size(346, 63);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "同期";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(158, 27);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 21);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "至";
+            // 
+            // dateTimePicker11
+            // 
+            this.dateTimePicker11.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker11.Location = new System.Drawing.Point(193, 23);
+            this.dateTimePicker11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dateTimePicker11.Name = "dateTimePicker11";
+            this.dateTimePicker11.Size = new System.Drawing.Size(140, 31);
+            this.dateTimePicker11.TabIndex = 5;
+            // 
+            // dateTimePicker12
+            // 
+            this.dateTimePicker12.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker12.Location = new System.Drawing.Point(17, 23);
+            this.dateTimePicker12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dateTimePicker12.Name = "dateTimePicker12";
+            this.dateTimePicker12.Size = new System.Drawing.Size(140, 31);
+            this.dateTimePicker12.TabIndex = 5;
+            // 
+            // reportViewer4
+            // 
+            this.reportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.DataTable1BindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "InhospitalIndicators.Service.Reports.WorkloadChangeandWeight.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.reportViewer4.Name = "reportViewer4";
+            this.reportViewer4.ServerReport.BearerToken = null;
+            this.reportViewer4.Size = new System.Drawing.Size(984, 401);
+            this.reportViewer4.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_query);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -784,6 +986,16 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -839,6 +1051,20 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_query;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker9;
+        private System.Windows.Forms.DateTimePicker dateTimePicker10;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker11;
+        private System.Windows.Forms.DateTimePicker dateTimePicker12;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
     }
 }
 

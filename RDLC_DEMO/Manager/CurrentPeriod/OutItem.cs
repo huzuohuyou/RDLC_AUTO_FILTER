@@ -14,7 +14,7 @@ namespace InhospitalIndicators.Service.Services.CurrentPeriod
         public override List<FeeItem> GetData()
         {
             return Db.SqlQueryable<FeeItem>(
-                $@"select sum(amt1),a.nu,c.codename  Project,sugbe,'同期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                $@"select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'同期' age from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
                     and entdate>=to_date('{PeriodStart}','yyyy-MM-dd')
                     and entdate<=to_date('{PeriodEnd}','yyyy-MM-dd')
                     and a.sunext=b.sunext
@@ -23,7 +23,7 @@ namespace InhospitalIndicators.Service.Services.CurrentPeriod
                     and a.nu=c.code
                     group by a.nu,sugbe,codename
                     union
-                    select sum(amt1),a.nu,c.codename  Project,sugbe,'当期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    select sum(amt1) fee,a.nu,c.codename  Project,sugbe,'当期' age from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
                     and entdate>=to_date('{CurrentStart}','yyyy-MM-dd')
                     and entdate<=to_date('{CurrentEnd}','yyyy-MM-dd')
                     and a.sunext=b.sunext

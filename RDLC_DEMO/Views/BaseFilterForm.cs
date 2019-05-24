@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,14 +42,16 @@ namespace InhospitalIndicators.Service.Views
                 l.Top = yIndex*40+15;
                 l.Left = index * 240 + 20;
                 l.Width = 80;
-                l.BackColor = Color.FromArgb(153,106,214);
+                l.BackColor = Color.FromArgb(85,149,210);
+                l.AutoSize = false;
+                l.TextAlign = ContentAlignment.MiddleCenter;
+                panel_filter.Controls.Add(l);
 
                 var c = FilterHelper.Convert(r);
                 c.Top = yIndex * 40+15;
                 c.Left = l.Left+ 80;
                 c.Width = 140;
                 c.BackColor = Color.Azure;
-                panel_filter.Controls.Add(l);
                 panel_filter.Controls.Add(c);
                 index++;
                 if (index%4==0&&index!=0)
@@ -73,7 +74,7 @@ namespace InhospitalIndicators.Service.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            this.FindForm().Close();
+            new frmFilterSetting().ShowDialog();
         }
 
         protected byte[] AuthGetFileData(string fileUrl)
@@ -106,6 +107,14 @@ namespace InhospitalIndicators.Service.Views
 
             reportViewer2.Tag = t.Result;
             reportViewer2.RefreshReport();
+        }
+
+        private void BaseFilterForm_Load(object sender, EventArgs e)
+        {
+            if (Controls.Count==0)
+            {
+
+            }
         }
     }
 }

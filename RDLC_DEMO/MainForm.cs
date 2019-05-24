@@ -33,35 +33,64 @@ namespace InhospitalIndicators.Service
         {
             if (tabControl1.SelectedTab.Text=="同期费用比")
             {
-                var flag = rb_all.Checked ? "all" : (rb_in.Checked ? "in" : (rb_out.Checked ? "out" : null));
-                Stream ms = new MemoryStream(Properties.Resources.CurrentPeriod);
-                reportViewer2.LocalReport.LoadReportDefinition(ms);
-                ReportDataSource reportDataSource = new ReportDataSource();
-                reportDataSource.Name = "DataSet1";
+
+            
+            var flag = rb_all.Checked ? "all" : (rb_in.Checked ? "in" : (rb_out.Checked ? "out" : null));
+            Stream ms = new MemoryStream(Properties.Resources.CurrentPeriod);
+            reportViewer2.LocalReport.LoadReportDefinition(ms);
+            ReportDataSource reportDataSource = new ReportDataSource();
+            reportDataSource.Name = "DataSet1";
 
 
-                Task<DataTable> t = new SameReriodIncomeReportService(
-                    flag
-                    , dtp_current_start.Value.Date.ToShortDateString()
-                    , dtp_current_end.Value.Date.ToShortDateString()
-                    , dtp_period_start.Value.Date.ToShortDateString()
-                    , dtp_period_end.Value.Date.ToShortDateString()).DoTable();
+            Task<DataTable> t = new SameReriodIncomeReportService(
+                flag
+                , dtp_current_start.Value.Date.ToShortDateString()
+                , dtp_current_end.Value.Date.ToShortDateString()
+                , dtp_period_start.Value.Date.ToShortDateString()
+                , dtp_period_end.Value.Date.ToShortDateString()).DoTable();
 
-                t.Wait();
-                reportDataSource.Value = t.Result;
-                reportViewer2.LocalReport.DataSources.Clear();
-                reportViewer2.LocalReport.DataSources.Add(reportDataSource);
-                reportViewer2.LocalReport.Refresh();
+            t.Wait();
+            reportDataSource.Value = t.Result;
+            reportViewer2.LocalReport.DataSources.Clear();
+            reportViewer2.LocalReport.DataSources.Add(reportDataSource);
+            reportViewer2.LocalReport.Refresh();
 
-                reportViewer2.Tag = t.Result;
-                reportViewer2.RefreshReport();
+            reportViewer2.Tag = t.Result;
+            reportViewer2.RefreshReport();
             }
+
             if (tabControl1.SelectedTab.Text == "38项费用") {
                 button1_Click_1(sender,e);
             }
             if (tabControl1.SelectedTab.Text == "检验项目比")
             {
                 button2_Click(sender, e);
+            }
+            if (tabControl1.SelectedTab.Text == "病理项目比")
+            {
+                var flag = radioButton8.Checked ? "all"
+                : (radioButton9.Checked ? "in"
+                : (radioButton7.Checked ? "out" : null));
+                Stream ms = new MemoryStream(Properties.Resources.WorkloadChangeandWeight);
+                reportViewer4.LocalReport.LoadReportDefinition(ms);
+                ReportDataSource reportDataSource = new ReportDataSource();
+                reportDataSource.Name = "DataSet1";
+
+
+                Task<DataTable> t = new PathologyService(flag
+                    , dateTimePicker10.Value.Date.ToShortDateString()
+                    , dateTimePicker9.Value.Date.ToShortDateString()
+                    , dateTimePicker12.Value.Date.ToShortDateString()
+                    , dateTimePicker11.Value.Date.ToShortDateString()).DoTable();
+
+                t.Wait();
+                reportDataSource.Value = t.Result;
+                reportViewer4.LocalReport.DataSources.Clear();
+                reportViewer4.LocalReport.DataSources.Add(reportDataSource);
+                reportViewer4.LocalReport.Refresh();
+
+                reportViewer4.Tag = t.Result;
+                reportViewer4.RefreshReport();
             }
         }
 

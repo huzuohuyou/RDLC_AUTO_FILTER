@@ -1,0 +1,25 @@
+ 发生时间：2019-05-24 11:03:24.3654
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1),a.nu,c.codename  Project,sugbe,'同期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe,codename
+                    union
+                    select sum(amt1),a.nu,c.codename  Project,sugbe,'当期' from twopd_slip a, twbas_tsuga b,twbas_basecode c  where a.nu<>90
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    and a.sunext=b.sunext
+                    and c.business='BASIC'
+                    and c.bun='NU'
+                    and a.nu=c.code
+                    group by a.nu,sugbe，codename) t  
+

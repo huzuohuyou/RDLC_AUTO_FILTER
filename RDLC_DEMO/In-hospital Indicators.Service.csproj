@@ -103,6 +103,16 @@
       <DependentUpon>WorkloadChangeandWeight.xsd</DependentUpon>
     </Compile>
     <Compile Include="IBaseReportService.cs" />
+    <Compile Include="Manager\Pathology\AllItem.cs" />
+    <Compile Include="Manager\Pathology\InItem.cs" />
+    <Compile Include="Manager\Pathology\OutItem.cs" />
+    <Compile Include="ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PathologyService.cs" />
     <Compile Include="ValueObject\EnumControlType.cs" />
     <Compile Include="ValueObject\EnumDataType.cs" />
     <Compile Include="ValueObject\ListItem.cs" />
@@ -111,6 +121,12 @@
     </Compile>
     <Compile Include="Views\BaseFilterForm.Designer.cs">
       <DependentUpon>BaseFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CurrentPeriodReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CurrentPeriodReportView.Designer.cs">
+      <DependentUpon>CurrentPeriodReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Demo.cs">
       <SubType>Form</SubType>
@@ -156,6 +172,20 @@
     <Compile Include="Services\ThirtyEightFeeReportService.cs" />
     <Compile Include="ValueObject\SPI_PROJECT.cs" />
     <Compile Include="ValueObject\TE_PROJECT.cs" />
+    <Compile Include="Views\frmFilterSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmFilterSetting.Designer.cs">
+      <DependentUpon>frmFilterSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Interfaces\IamUc.cs" />
+    <Compile Include="Views\Interfaces\ICanAddUc.cs" />
+    <Compile Include="Views\ucFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucFilter.Designer.cs">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +199,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ThirtyEight.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -186,6 +219,9 @@
     <EmbeddedResource Include="Views\BaseFilterForm.resx">
       <DependentUpon>BaseFilterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CurrentPeriodReportView.resx">
+      <DependentUpon>CurrentPeriodReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Demo.resx">
       <DependentUpon>Demo.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +236,12 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Views\frmFilterSetting.resx">
+      <DependentUpon>frmFilterSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucFilter.resx">
+      <DependentUpon>ucFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSets\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

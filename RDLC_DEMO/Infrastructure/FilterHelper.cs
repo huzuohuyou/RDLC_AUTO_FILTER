@@ -25,7 +25,7 @@ namespace InhospitalIndicators.Service.Infrastructure
                 var c = new DateTimePicker();
                 c.Format = DateTimePickerFormat.Custom;
                 c.CustomFormat= "yyyy-MM-dd";
-                return new DateTimePicker();
+                return c;
             }
             else if (filter.ControlType == EnumControlType._Combox)
             {

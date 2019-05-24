@@ -6,7 +6,7 @@ namespace InhospitalIndicators.Service.Entitys
 
     public class FilterEntity
     {
-        public FilterEntity(int orderNo, string paramLabel, string paramName, EnumDataType dataType, EnumControlType control)
+        public FilterEntity(decimal orderNo, string paramLabel, string paramName, EnumDataType dataType, EnumControlType control)
         {
             OrderNo = orderNo;
             ParamName = paramName;
@@ -15,7 +15,7 @@ namespace InhospitalIndicators.Service.Entitys
             ControlType = control;
         }
 
-        public int OrderNo { get; set; }
+        public decimal OrderNo { get; set; }
 
         public string ParamLabel { get; set; }
 

@@ -1,0 +1,1282 @@
+ 发生时间：2019-05-24 11:24:02.3458
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1), c.codename,c.code,'当期' from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-24 11:24:03.3505
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1) fee, c.codename project,c.code,'当期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-24 11:24:03.6315
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1), c.codename,c.code,'当期' from twipd_slip a,twmir_duizhao b ,twbas_basecode c where
+                     b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-24 11:24:03.8388
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code 
+                    union 
+                    select sum(amt1) fee, c.codename project,c.code,'当期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+                        b.sunext=A.sunext
+                    and c.business='IPD'
+                    and c.bun='病案附页'
+                    and C.CODE =b.t_bun2
+                    and entdate>=to_date('2019/5/24','yyyy-MM-dd')
+                    and entdate<=to_date('2019/5/24','yyyy-MM-dd')
+                    group by c.codename,c.code ) t  
+
+ 发生时间：2019-05-24 15:32:13.9051
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:15.0905
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:15.2510
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:15.5353
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:41.3475
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:41.6957
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:41.8144
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:32:42.0787
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:02.4567
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:02.7420
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:02.7829
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:03.0512
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '检验检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '检验检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:38.1249
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '病理检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:38.7108
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '病理检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:38.8145
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '病理检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twipd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
+ 发生时间：2019-05-24 15:33:38.8314
+ 日志级别：INFO
+ 操作账号：
+ 操作者IP：
+ IP归属地：
+ 浏 览 器：
+ 操作模块：
+ 提示信息：SELECT t.* FROM  (select p.project,q.count,q.fee,q.age from (
+    select distinct value, 0 num,codename Project from twbas_basecode  where business = '统计业务'
+    and bun = '病理检测') p
+    left join
+        (
+SELECT t.* FROM  (--检验数量
+                    select m.codename Project, m.num count, n.fee ,'同期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+                    union
+                    select m.codename Project, m.num count, n.fee, '当期' age from
+                    (
+                    SELECT VALUE, COUNT(0) num, codename FROM(
+                    select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    --and codename = '甲功'
+                    --and sucode = 'EXM01058'
+                    AND GBDC <> 'DC'
+                    GROUP BY ORDERNO, SUCODE, VALUE, codename)
+                    GROUP BY VALUE, codename
+                    )m
+                    left join
+                    (
+                    --检验金额
+                    select sum(amt) fee, value, codename from(
+                    select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
+                    and a.bun = '病理检测'
+                    and(a.remark1 = b.sucode or a.remark2 = b.sucode)
+                    and b.bdate >= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.bdate <= to_date('2019/5/24', 'yyyy-MM-dd')
+                    and b.nu <> 90
+                    group by sucode, value, codename)
+                    group by value, codename)n
+                    on m.codename = n.codename
+) t )q 
+on p.project=q.project
+) t  
+
