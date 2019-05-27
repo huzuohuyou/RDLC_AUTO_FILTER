@@ -91,6 +91,22 @@ D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Debug\Elight.Infrastructure.pdb
 D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Debug\NLog.xml
 D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Debug\App_Data\Logs\TextFile1.txt
 D:\GitHub\RDLC_DEMO\RDLC_DEMO\bin\Debug\Configs\NLog.config
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.MainForm.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Properties.Resources.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.ReportFrm.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.BaseFilterForm.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.CurrentPeriodReportView.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.Demo.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcBaseFilter.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcComBox.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcDateTimePicker.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcTextBox.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.frmFilterSetting.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.ucFilter.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.GenerateResource.cache
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\RdlCompile.cache
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\RdlCompile.compiled
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.CoreCompileInputs.cache
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\App_Data\Logs\TextFile1.txt
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\Configs\NLog.config
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\Reports\ThirtyEight.rdlc
@@ -172,23 +188,6 @@ D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\pt\Microsoft.ReportViewer.WinForm
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.MainForm.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Properties.Resources.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.ReportFrm.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.BaseFilterForm.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.CurrentPeriodReportView.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.Demo.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcBaseFilter.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcComBox.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcDateTimePicker.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcTextBox.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.frmFilterSetting.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.ucFilter.resources
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.GenerateResource.cache
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\RdlCompile.cache
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\RdlCompile.compiled
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.CoreCompileInputs.cache
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.CopyComplete
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.exe
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.pdb
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csprojAssemblyReference.cache

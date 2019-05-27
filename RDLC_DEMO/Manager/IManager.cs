@@ -9,6 +9,6 @@ namespace InhospitalIndicators.Service.Services.CurrentPeriod
 {
     interface IManager<T>
     {
-        List<T> GetData();
+        Tuple<string, List<T>> GetData();
     }
 }

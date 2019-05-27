@@ -12,6 +12,6 @@ namespace InhospitalIndicators.Service.Manager
         public string PeriodStart { get; set; }
         public string PeriodEnd { get; set; }
 
-        public abstract List<T> GetData();
+        public abstract Tuple< string,List<T>> GetData();
     }
 }

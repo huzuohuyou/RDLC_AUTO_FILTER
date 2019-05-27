@@ -1,4 +1,5 @@
 ﻿using InhospitalIndicators.Service.Entitys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,21 +8,27 @@ namespace InhospitalIndicators.Service.Manager.Pathology
 
     class AllItem : BaseManager<FeeItem>
     {
-        public override List<FeeItem> GetData()
+        public override Tuple<string, List<FeeItem>> GetData()
         {
-            return new InItem
+            var _in = new InItem
             {
                 CurrentStart = CurrentStart,
-                CurrentEnd = CurrentStart,
-                PeriodStart = CurrentStart,
-                PeriodEnd = CurrentStart,
-            }.GetData().Union(new OutItem
+                CurrentEnd = CurrentEnd,
+                PeriodStart = PeriodStart,
+                PeriodEnd = PeriodEnd,
+            }.GetData().Item1;
+            var _out = new OutItem
             {
                 CurrentStart = CurrentStart,
-                CurrentEnd = CurrentStart,
-                PeriodStart = CurrentStart,
-                PeriodEnd = CurrentStart,
-            }.GetData()).ToList();
+                CurrentEnd = CurrentEnd,
+                PeriodStart = PeriodStart,
+                PeriodEnd = PeriodEnd,
+            }.GetData().Item1;
+            var sql = $@"{_in}
+                    union
+                    {_out}";
+            var _all = Db.SqlQueryable<FeeItem>(sql).ToList();
+            return new Tuple<string, List<FeeItem>>(sql, _all);
         }
     }
 }

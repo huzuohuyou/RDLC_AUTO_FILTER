@@ -16,6 +16,7 @@ namespace InhospitalIndicators.Service.Services
             Db = new SqlSugarClient(new ConnectionConfig()
             {
 #if DEBUG
+                //ConnectionString = ConfigurationManager.ConnectionStrings["connStr"].ToString(),
                 ConnectionString = "User ID=tw_hsp_pmpa;Password=hospital;Data Source=192.168.5.58/ocsdb;",
 #else
                 ConnectionString = ConfigurationManager.ConnectionStrings["connStr"].ToString(), //"User ID=tw_hsp_pmpa;Password=hospital;Data Source=192.168.5.58/ocsdb;",

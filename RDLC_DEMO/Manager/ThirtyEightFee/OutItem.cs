@@ -10,10 +10,9 @@ namespace InhospitalIndicators.Service.Manager.ThirtyEightFee
 
      class OutItem : BaseManager<FeeItem>
     {
-        public override List<FeeItem> GetData()
+        public override Tuple<string, List<FeeItem>> GetData()
         {
-            return Db.SqlQueryable<FeeItem>(
-                $@"select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
+            var sql = $@"select sum(amt1) fee, c.codename project,c.code,'同期' age from twopd_slip a,twmir_duizhao b ,twbas_basecode c where
                         b.sunext=A.sunext
                     and c.business='IPD'
                     and c.bun='病案附页'
@@ -29,7 +28,10 @@ namespace InhospitalIndicators.Service.Manager.ThirtyEightFee
                     and C.CODE =b.t_bun2
                     and entdate>=to_date('{CurrentStart}','yyyy-MM-dd')
                     and entdate<=to_date('{CurrentEnd}','yyyy-MM-dd')
-                    group by c.codename,c.code ").ToList();
+                    group by c.codename,c.code ";
+            var result= Db.SqlQueryable<FeeItem>(sql
+                ).ToList();
+            return new Tuple<string, List<FeeItem>>(sql, result);
         }
     }
 }

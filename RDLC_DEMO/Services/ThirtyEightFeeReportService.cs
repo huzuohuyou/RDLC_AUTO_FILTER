@@ -35,7 +35,7 @@ namespace InhospitalIndicators.Service.Services
                     CurrentEnd = currentEnd,
                     PeriodStart = periodStart,
                     PeriodEnd = periodEnd,
-                }.GetData();
+                }.GetData().Item2;
             }
             else if (flag == "in")
             {
@@ -45,7 +45,7 @@ namespace InhospitalIndicators.Service.Services
                     CurrentEnd = currentEnd,
                     PeriodStart = periodStart,
                     PeriodEnd = periodEnd,
-                }.GetData();
+                }.GetData().Item2;
             }
             else if (flag == "out")
             {
@@ -55,7 +55,7 @@ namespace InhospitalIndicators.Service.Services
                     CurrentEnd = currentEnd,
                     PeriodStart = periodStart,
                     PeriodEnd = periodEnd,
-                }.GetData();
+                }.GetData().Item2;
             }
             var list = new List<ThirtyEightFee>
             {

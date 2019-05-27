@@ -53,7 +53,7 @@ namespace InhospitalIndicators.Service
                         CurrentEnd=currentEnd,
                         PeriodStart=periodStart,
                         PeriodEnd= periodEnd,
-                    }.GetData();
+                    }.GetData().Item2;
                 }
                 else if (flag=="in")
                 {
@@ -63,7 +63,7 @@ namespace InhospitalIndicators.Service
                         CurrentEnd = currentEnd,
                         PeriodStart = periodStart,
                         PeriodEnd = periodEnd,
-                    }.GetData();
+                    }.GetData().Item2;
                 }
                 else if (flag=="out")
                 {
@@ -73,7 +73,7 @@ namespace InhospitalIndicators.Service
                         CurrentEnd = currentEnd,
                         PeriodStart = periodStart,
                         PeriodEnd = periodEnd,
-                    }.GetData();
+                    }.GetData().Item2;
                 }
 
                 var sumCurrent = items?.Where(r => r?.Age == "当期")?.Sum(r => r?.Fee.ToDouble()).ToString().ToDouble().ToString();
@@ -106,14 +106,14 @@ namespace InhospitalIndicators.Service
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=1,
                     Project="  床位收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.BED_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.BED_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.BED_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.BED_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=2,
                     Project="  医事服务费",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.MEDICAL_FEES&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.MEDICAL_FEES&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.MEDICAL_FEES&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.MEDICAL_FEES&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=3,
@@ -130,20 +130,20 @@ namespace InhospitalIndicators.Service
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=4,
                     Project="    其中：放射",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.RADIATION&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.RADIATION&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.RADIATION&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.RADIATION&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=5,
                     Project="  化验收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.LAB_FEES&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.LAB_FEES&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.LAB_FEES&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.LAB_FEES&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=6,
                     Project="  病理收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.PATHOLOGY&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.PATHOLOGY&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.PATHOLOGY&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.PATHOLOGY&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=7,
@@ -157,31 +157,31 @@ namespace InhospitalIndicators.Service
                     ||r?.Project==SPI_PROJECT.HYPERBARIC_OXYGEN_FEE
                     ||r?.Project==SPI_PROJECT.HEMODIALYSIS
                     ||r?.Project==SPI_PROJECT.BLOOD_TRANSFUSION_FEE
-                    ||r?.Project==SPI_PROJECT.OXYGEN_DELIVERY_FEE)&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    ||r?.Project==SPI_PROJECT.OXYGEN_DELIVERY_FEE)&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=8,
                     Project="  手术收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.SURGERY_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.SURGERY_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.SURGERY_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.SURGERY_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=9,
                     Project="  护理收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.NURSING_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.NURSING_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.NURSING_FEE&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.NURSING_FEE&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=10,
                     Project="  卫生材料收入",
-                    Current=items.Where(r=>r.NuValue<19&& r?.Sugbe=="0"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r.NuValue<19&& r?.Sugbe=="0"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r.NuValue<19&& r?.Sugbe=="0"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r.NuValue<19&& r?.Sugbe=="0"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=11,
                     Project="  其他住院收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.OTHER_EXPENSES&&r?.Sugbe=="1"&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.OTHER_EXPENSES&&r?.Sugbe=="1"&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.OTHER_EXPENSES&&r?.Sugbe=="1"&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.OTHER_EXPENSES&&r?.Sugbe=="1"&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=12,
@@ -192,20 +192,20 @@ namespace InhospitalIndicators.Service
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=13,
                     Project="  其中：西药收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.WESTERN_MEDICINE_FEE&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.WESTERN_MEDICINE_FEE&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.WESTERN_MEDICINE_FEE&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.WESTERN_MEDICINE_FEE&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=14,
                     Project="    中草药收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_HERBAL_MEDICINE_FEE&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_HERBAL_MEDICINE_FEE&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_HERBAL_MEDICINE_FEE&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_HERBAL_MEDICINE_FEE&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
                     OrderNo=15,
                     Project="    中成药收入",
-                    Current=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_PATENT_MEDICINE_FEE&& r?.Age=="当期")?.FirstOrDefault()?.Fee,
-                    Period=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_PATENT_MEDICINE_FEE&& r?.Age=="同期")?.FirstOrDefault()?.Fee,
+                    Current=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_PATENT_MEDICINE_FEE&& r?.Age=="当期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
+                    Period=items.Where(r=>r?.Project==SPI_PROJECT.CHINESE_PATENT_MEDICINE_FEE&& r?.Age=="同期")?.Sum(i=>i.Fee.ToDouble()).ToString(),
                 },
 
                 new SamePeriodIncomRatio(sumCurrent,sumPeriod){
