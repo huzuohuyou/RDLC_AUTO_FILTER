@@ -44,7 +44,7 @@ namespace InhospitalIndicators.Service
         {
             try
             {
-                var s = param.DoExport();
+                var s = param?.DoExport();
                 List<FeeItem> items = null;
                 if (flag == "all")
                 {

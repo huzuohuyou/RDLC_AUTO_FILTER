@@ -60,11 +60,53 @@ namespace InhospitalIndicators.Service
             }
 
             if (tabControl1.SelectedTab.Text == "38项费用") {
-                button1_Click_1(sender,e);
+                var flag = radioButton2.Checked ? "all" : (radioButton3.Checked ? "out" : (radioButton1.Checked ? "in" : null));
+                Stream ms = new MemoryStream(Properties.Resources.ThirtyEight);
+                reportViewer1.LocalReport.LoadReportDefinition(ms);
+                ReportDataSource reportDataSource = new ReportDataSource();
+                reportDataSource.Name = "ThirtyEight2";
+
+
+                Task<DataTable> t = new ThirtyEightFeeReportService(flag
+                    , dateTimePicker2.Value.Date.ToShortDateString()
+                    , dateTimePicker1.Value.Date.ToShortDateString()
+                    , dateTimePicker4.Value.Date.ToShortDateString()
+                    , dateTimePicker3.Value.Date.ToShortDateString()).DoTable();
+
+                t.Wait();
+                reportDataSource.Value = t.Result;
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+                reportViewer1.LocalReport.Refresh();
+
+                reportViewer1.Tag = t.Result;
+                reportViewer1.RefreshReport();
             }
             if (tabControl1.SelectedTab.Text == "检验项目比")
             {
-                button2_Click(sender, e);
+                var flag = radioButton5.Checked ? "all"
+               : (radioButton6.Checked ? "out"
+               : (radioButton4.Checked ? "in" : null));
+                Stream ms = new MemoryStream(Properties.Resources.WorkloadChangeandWeight);
+                reportViewer3.LocalReport.LoadReportDefinition(ms);
+                ReportDataSource reportDataSource = new ReportDataSource();
+                reportDataSource.Name = "DataSet1";
+
+
+                Task<DataTable> t = new WorkloadWeightReportService(flag
+                    , dateTimePicker6.Value.Date.ToShortDateString()
+                    , dateTimePicker5.Value.Date.ToShortDateString()
+                    , dateTimePicker8.Value.Date.ToShortDateString()
+                    , dateTimePicker7.Value.Date.ToShortDateString()).DoTable();
+
+                t.Wait();
+                reportDataSource.Value = t.Result;
+                reportViewer3.LocalReport.DataSources.Clear();
+                reportViewer3.LocalReport.DataSources.Add(reportDataSource);
+                reportViewer3.LocalReport.Refresh();
+
+                reportViewer3.Tag = t.Result;
+                reportViewer3.RefreshReport();
             }
             if (tabControl1.SelectedTab.Text == "病理项目比")
             {
@@ -94,57 +136,7 @@ namespace InhospitalIndicators.Service
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            var flag = radioButton2.Checked ? "all" : (radioButton3.Checked ? "out" : (radioButton1.Checked ? "in" : null));
-            Stream ms = new MemoryStream(Properties.Resources.ThirtyEight);
-            reportViewer1.LocalReport.LoadReportDefinition(ms);
-            ReportDataSource reportDataSource = new ReportDataSource();
-            reportDataSource.Name = "ThirtyEight2";
-
-
-            Task<DataTable> t = new ThirtyEightFeeReportService(flag
-                , dateTimePicker2.Value.Date.ToShortDateString()
-                , dateTimePicker1.Value.Date.ToShortDateString()
-                , dateTimePicker4.Value.Date.ToShortDateString()
-                , dateTimePicker3.Value.Date.ToShortDateString()).DoTable();
-
-            t.Wait();
-            reportDataSource.Value = t.Result;
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-            reportViewer1.LocalReport.Refresh();
-
-            reportViewer1.Tag = t.Result;
-            reportViewer1.RefreshReport();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var flag = radioButton5.Checked ? "all" 
-                : (radioButton6.Checked ? "out"
-                : (radioButton4.Checked ? "in" : null));
-            Stream ms = new MemoryStream(Properties.Resources.WorkloadChangeandWeight);
-            reportViewer3.LocalReport.LoadReportDefinition(ms);
-            ReportDataSource reportDataSource = new ReportDataSource();
-            reportDataSource.Name = "DataSet1";
-
-
-            Task<DataTable> t = new WorkloadWeightReportService(flag
-                , dateTimePicker6.Value.Date.ToShortDateString()
-                , dateTimePicker5.Value.Date.ToShortDateString()
-                , dateTimePicker8.Value.Date.ToShortDateString()
-                , dateTimePicker7.Value.Date.ToShortDateString()).DoTable();
-
-            t.Wait();
-            reportDataSource.Value = t.Result;
-            reportViewer3.LocalReport.DataSources.Clear();
-            reportViewer3.LocalReport.DataSources.Add(reportDataSource);
-            reportViewer3.LocalReport.Refresh();
-
-            reportViewer3.Tag = t.Result;
-            reportViewer3.RefreshReport();
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {

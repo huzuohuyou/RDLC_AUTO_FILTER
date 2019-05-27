@@ -81,8 +81,6 @@
             this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btn_query = new System.Windows.Forms.Button();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
@@ -97,6 +95,8 @@
             this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_query = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -736,28 +736,6 @@
             this.tabPage4.Text = "病理项目比";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(685, 561);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btn_query
-            // 
-            this.btn_query.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_query.Location = new System.Drawing.Point(863, 562);
-            this.btn_query.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_query.Name = "btn_query";
-            this.btn_query.Size = new System.Drawing.Size(97, 34);
-            this.btn_query.TabIndex = 8;
-            this.btn_query.Text = "查询";
-            this.btn_query.UseVisualStyleBackColor = true;
-            this.btn_query.Click += new System.EventHandler(this.button1_Click);
-            // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -936,6 +914,29 @@
             this.reportViewer4.ServerReport.BearerToken = null;
             this.reportViewer4.Size = new System.Drawing.Size(984, 401);
             this.reportViewer4.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(685, 561);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(130, 37);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btn_query
+            // 
+            this.btn_query.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_query.Location = new System.Drawing.Point(863, 562);
+            this.btn_query.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_query.Name = "btn_query";
+            this.btn_query.Size = new System.Drawing.Size(97, 34);
+            this.btn_query.TabIndex = 8;
+            this.btn_query.Text = "查询";
+            this.btn_query.UseVisualStyleBackColor = true;
+            this.btn_query.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
