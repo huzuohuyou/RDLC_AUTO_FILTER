@@ -69,8 +69,8 @@ namespace InhospitalIndicators.Service
             if (tabControl1.SelectedTab.Text == "病理项目比")
             {
                 var flag = radioButton8.Checked ? "all"
-                : (radioButton9.Checked ? "in"
-                : (radioButton7.Checked ? "out" : null));
+                : (radioButton9.Checked ? "out"
+                : (radioButton7.Checked ? "in" : null));
                 Stream ms = new MemoryStream(Properties.Resources.WorkloadChangeandWeight);
                 reportViewer4.LocalReport.LoadReportDefinition(ms);
                 ReportDataSource reportDataSource = new ReportDataSource();
@@ -122,8 +122,8 @@ namespace InhospitalIndicators.Service
         private void button2_Click(object sender, EventArgs e)
         {
             var flag = radioButton5.Checked ? "all" 
-                : (radioButton6.Checked ? "in" 
-                : (radioButton4.Checked ? "out" : null));
+                : (radioButton6.Checked ? "out"
+                : (radioButton4.Checked ? "in" : null));
             Stream ms = new MemoryStream(Properties.Resources.WorkloadChangeandWeight);
             reportViewer3.LocalReport.LoadReportDefinition(ms);
             ReportDataSource reportDataSource = new ReportDataSource();

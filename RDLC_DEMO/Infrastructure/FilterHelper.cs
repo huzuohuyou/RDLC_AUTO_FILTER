@@ -1,5 +1,6 @@
 ﻿using InhospitalIndicators.Service.Entitys;
 using InhospitalIndicators.Service.ValueObject;
+using InhospitalIndicators.Service.Views.FilterItems;
 using System.Windows.Forms;
 
 namespace InhospitalIndicators.Service.Infrastructure
@@ -12,8 +13,8 @@ namespace InhospitalIndicators.Service.Infrastructure
 
             if (filter.ControlType == EnumControlType._TextBox)
             {
-                var c= new TextBox();
-                return c;
+                //var c= new TextBox();
+                return new UcTextBox();
             }
             else if (filter.ControlType == EnumControlType._NumBox)
             {
@@ -25,7 +26,7 @@ namespace InhospitalIndicators.Service.Infrastructure
                 var c = new DateTimePicker();
                 c.Format = DateTimePickerFormat.Custom;
                 c.CustomFormat= "yyyy-MM-dd";
-                return c;
+                return new UcDateTimePicker();
             }
             else if (filter.ControlType == EnumControlType._Combox)
             {
@@ -34,7 +35,7 @@ namespace InhospitalIndicators.Service.Infrastructure
                 c.DisplayMember = "key";
                 c.ValueMember = "value";
                 
-                return c;
+                return new UcComBox();
             }
             else if (filter.ControlType == EnumControlType._RadioButton)
             {

@@ -9,6 +9,11 @@ namespace InhospitalIndicators.Service
 
     public abstract class BaseReportService<T>: IBaseReportService
     {
+        public BaseReportService()
+        {
+            
+        }
+
         public BaseReportService(string _flag, string _currentStart, string _currentEnd, string _periodStart, string _periodEnd)
         {
             flag = _flag;
@@ -30,8 +35,6 @@ namespace InhospitalIndicators.Service
         {
             var list = Do();
             var table = ToDataTable(Do());
-
-
             return table;
         }
 

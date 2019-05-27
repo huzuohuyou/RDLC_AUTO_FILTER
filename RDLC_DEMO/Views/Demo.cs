@@ -12,7 +12,11 @@ namespace InhospitalIndicators.Service.Views
     internal class Demo : BaseFilterForm
     {
         public Demo() 
-        { }
+        {
+            ReportDataSourceName = "DataSet1";
+            FileName = "CurrentPeriod";
+            service = new SameReriodIncomeReportService(this);
+        }
 
         public override List<FilterEntity> readFilters()
         {

@@ -25,8 +25,8 @@ SELECT t.* FROM  (--检验数量
                     select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
                     and a.bun = '检验检测'
                     and(a.remark1 = b.sucode or a.remark2 = b.sucode)
-                    and b.bdate >= to_date('{PeriodStart}', 'yyyy-MM-dd')
-                    and b.bdate <= to_date('{PeriodEnd}', 'yyyy-MM-dd')
+                    and b.entdate >= to_date('{PeriodStart}', 'yyyy-MM-dd')
+                    and b.entdate <= to_date('{PeriodEnd}', 'yyyy-MM-dd')
                     and b.nu <> 90
                     --and codename = '甲功'
                     --and sucode = 'EXM01058'
@@ -41,8 +41,8 @@ SELECT t.* FROM  (--检验数量
                     select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
                     and a.bun = '检验检测'
                     and(a.remark1 = b.sucode or a.remark2 = b.sucode)
-                    and b.bdate >= to_date('{PeriodStart}', 'yyyy-MM-dd')
-                    and b.bdate <= to_date('{PeriodEnd}', 'yyyy-MM-dd')
+                    and b.entdate >= to_date('{PeriodStart}', 'yyyy-MM-dd')
+                    and b.entdate <= to_date('{PeriodEnd}', 'yyyy-MM-dd')
                     and b.nu <> 90
                     group by sucode, value, codename)
                     group by value, codename)n
@@ -54,8 +54,8 @@ SELECT t.* FROM  (--检验数量
                     select ORDERNO, SUCODE, VALUE, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
                     and a.bun = '检验检测'
                     and(a.remark1 = b.sucode or a.remark2 = b.sucode)
-                    and b.bdate >= to_date('{CurrentStart}', 'yyyy-MM-dd')
-                    and b.bdate <= to_date('{CurrentEnd}', 'yyyy-MM-dd')
+                    and b.entdate >= to_date('{CurrentStart}', 'yyyy-MM-dd')
+                    and b.entdate <= to_date('{CurrentEnd}', 'yyyy-MM-dd')
                     and b.nu <> 90
                     --and codename = '甲功'
                     --and sucode = 'EXM01058'
@@ -70,8 +70,8 @@ SELECT t.* FROM  (--检验数量
                     select sum(amt1)amt, sucode, value, codename from twbas_basecode a, twopd_slip b where business = '统计业务'
                     and a.bun = '检验检测'
                     and(a.remark1 = b.sucode or a.remark2 = b.sucode)
-                    and b.bdate >= to_date('{CurrentStart}', 'yyyy-MM-dd')
-                    and b.bdate <= to_date('{CurrentEnd}', 'yyyy-MM-dd')
+                    and b.entdate >= to_date('{CurrentStart}', 'yyyy-MM-dd')
+                    and b.entdate <= to_date('{CurrentEnd}', 'yyyy-MM-dd')
                     and b.nu <> 90
                     group by sucode, value, codename)
                     group by value, codename)n

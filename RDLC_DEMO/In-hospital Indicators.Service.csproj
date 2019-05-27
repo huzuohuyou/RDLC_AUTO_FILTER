@@ -172,6 +172,33 @@
     <Compile Include="Services\ThirtyEightFeeReportService.cs" />
     <Compile Include="ValueObject\SPI_PROJECT.cs" />
     <Compile Include="ValueObject\TE_PROJECT.cs" />
+    <Compile Include="Views\FilterItems\Interfaces\ICanExportMyValue.cs" />
+    <Compile Include="Views\FilterItems\Interfaces\ICanSetDataSource.cs" />
+    <Compile Include="Views\FilterItems\Interfaces\ICanSetFilterInfo.cs" />
+    <Compile Include="Views\FilterItems\UcBaseFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcBaseFilter.Designer.cs">
+      <DependentUpon>UcBaseFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcComBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcComBox.Designer.cs">
+      <DependentUpon>UcComBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcDateTimePicker.Designer.cs">
+      <DependentUpon>UcDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FilterItems\UcTextBox.Designer.cs">
+      <DependentUpon>UcTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmFilterSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +207,7 @@
     </Compile>
     <Compile Include="Views\Interfaces\IamUc.cs" />
     <Compile Include="Views\Interfaces\ICanAddUc.cs" />
+    <Compile Include="Views\Interfaces\ICanExportParam.cs" />
     <Compile Include="Views\ucFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +264,18 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Views\FilterItems\UcBaseFilter.resx">
+      <DependentUpon>UcBaseFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilterItems\UcComBox.resx">
+      <DependentUpon>UcComBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilterItems\UcDateTimePicker.resx">
+      <DependentUpon>UcDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilterItems\UcTextBox.resx">
+      <DependentUpon>UcTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmFilterSetting.resx">
       <DependentUpon>frmFilterSetting.cs</DependentUpon>
     </EmbeddedResource>

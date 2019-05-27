@@ -1,6 +1,7 @@
 ﻿using Framework.Win.Base;
 using InhospitalIndicators.Service.Entitys;
 using InhospitalIndicators.Service.Infrastructure;
+using InhospitalIndicators.Service.Views.Interfaces;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,13 @@ using System.Windows.Forms;
 
 namespace InhospitalIndicators.Service.Views
 {
-    public  partial class BaseFilterForm : PageForm, ICanLoadFilter
+    public  partial class BaseFilterForm : PageForm, ICanLoadFilter, ICanExportParam
     {
-        private IBaseReportService service;
+        public IBaseReportService service;
 
-        private string ReportDataSourceName;
+        public string ReportDataSourceName="DataSet1";
 
-        private string FileName;
+        public string FileName;
 
         public BaseFilterForm()
         {
@@ -37,21 +38,10 @@ namespace InhospitalIndicators.Service.Views
             var yIndex = 0;
             list.ForEach(r =>
             {
-                var l = new Label();
-                l.Text = $@"{r.ParamLabel}";
-                l.Top = yIndex*40+15;
-                l.Left = index * 240 + 20;
-                l.Width = 80;
-                l.BackColor = Color.FromArgb(85,149,210);
-                l.AutoSize = false;
-                l.TextAlign = ContentAlignment.MiddleCenter;
-                panel_filter.Controls.Add(l);
 
                 var c = FilterHelper.Convert(r);
                 c.Top = yIndex * 40+15;
-                c.Left = l.Left+ 80;
-                c.Width = 140;
-                c.BackColor = Color.Azure;
+                c.Left = 360*index+ 80;
                 panel_filter.Controls.Add(c);
                 index++;
                 if (index%4==0&&index!=0)
@@ -115,6 +105,12 @@ namespace InhospitalIndicators.Service.Views
             {
 
             }
+        }
+
+        public string DoExport()
+        {
+            return "hahha";
+            //panel_filter.Controls.
         }
     }
 }

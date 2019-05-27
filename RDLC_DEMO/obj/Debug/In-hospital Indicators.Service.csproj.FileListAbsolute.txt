@@ -178,6 +178,10 @@ D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Repo
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.BaseFilterForm.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.CurrentPeriodReportView.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.Demo.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcBaseFilter.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcComBox.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcDateTimePicker.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.FilterItems.UcTextBox.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.frmFilterSetting.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\InhospitalIndicators.Service.Views.ucFilter.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Debug\In-hospital Indicators.Service.csproj.GenerateResource.cache

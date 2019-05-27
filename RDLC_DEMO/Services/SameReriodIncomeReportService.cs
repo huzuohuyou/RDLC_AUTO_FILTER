@@ -1,6 +1,7 @@
 ﻿using InhospitalIndicators.Service.Entitys;
 using InhospitalIndicators.Service.Services.CurrentPeriod;
 using InhospitalIndicators.Service.ValueObject;
+using InhospitalIndicators.Service.Views.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,24 +14,39 @@ namespace InhospitalIndicators.Service
     /// </summary>
     public class SameReriodIncomeReportService: BaseReportService<SamePeriodIncomRatio>
     {
-       
+        ICanExportParam param;
+        public SameReriodIncomeReportService(ICanExportParam p) :base() {
+            param = p;
+        }
 
         public SameReriodIncomeReportService(string _flag, string _currentStart, string _currentEnd, string _periodStart, string _periodEnd)
             :base(_flag,_currentStart,_currentEnd,_periodStart,_periodEnd)
         {
-            //flag = _flag;
-            //currentStart = _currentStart;
-            //currentEnd = _currentEnd;
-            //periodStart = _periodStart;
-            //periodEnd = _periodEnd;
+            
+        }
+
+        public List<SamePeriodIncomRatio> Do(
+            string _flag, 
+            string _currentStart, 
+            string _currentEnd, 
+            string _periodStart, 
+            string _periodEnd)
+        {
+            flag = _flag;
+            currentStart = _currentStart;
+            currentEnd = _currentEnd;
+            periodStart = _periodStart;
+            periodEnd = _periodEnd;
+            return Do();
         }
 
         public override List<SamePeriodIncomRatio> Do()
         {
             try
             {
+                var s = param.DoExport();
                 List<FeeItem> items = null;
-                if (flag=="all")
+                if (flag == "all")
                 {
                     items = new AllItem() {
                         CurrentStart=currentStart,

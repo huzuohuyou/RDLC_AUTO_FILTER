@@ -172,13 +172,16 @@ D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Release\pt\Microsoft.ReportViewer.WinFo
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csprojAssemblyReference.cache
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.MainForm.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Properties.Resources.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.ReportFrm.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.BaseFilterForm.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.CurrentPeriodReportView.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.Demo.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.FilterItems.UcBaseFilter.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.FilterItems.UcComBox.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.FilterItems.UcDateTimePicker.resources
+D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.FilterItems.UcTextBox.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.frmFilterSetting.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\InhospitalIndicators.Service.Views.ucFilter.resources
 D:\GitHub\RDLC_AUTO_FILTER\RDLC_DEMO\obj\Release\In-hospital Indicators.Service.csproj.GenerateResource.cache
