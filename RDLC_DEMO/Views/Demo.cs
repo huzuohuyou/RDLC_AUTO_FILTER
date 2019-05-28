@@ -23,10 +23,10 @@ namespace InhospitalIndicators.Service.Views
             var json = JsonConvert.SerializeObject(new List<FilterEntity>
             {
                
-                new FilterEntity(1,"开始日期1：","name",EnumDataType._String,EnumControlType._DateTimepicker),
-                new FilterEntity(1,"结束日期1：","name",EnumDataType._String,EnumControlType._DateTimepicker),
-                new FilterEntity(1,"开始日期2：","name",EnumDataType._String,EnumControlType._DateTimepicker),
-                new FilterEntity(1,"结束日期2：","name",EnumDataType._String,EnumControlType._DateTimepicker),
+                new FilterEntity(1,"开始日期1：","start_date",EnumDataType._String,EnumControlType._DateTimepicker),
+                new FilterEntity(1,"结束日期1：","end_date",EnumDataType._String,EnumControlType._DateTimepicker),
+                new FilterEntity(1,"开始日期2：","start_date2",EnumDataType._String,EnumControlType._DateTimepicker),
+                new FilterEntity(1,"结束日期2：","end_date2",EnumDataType._String,EnumControlType._DateTimepicker),
                  new FilterEntity(1,"姓名：","name",EnumDataType._String,EnumControlType._TextBox),
             });
             return JsonConvert.DeserializeObject<List<FilterEntity>>(json); ;

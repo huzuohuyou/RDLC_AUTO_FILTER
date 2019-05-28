@@ -1,8 +1,11 @@
 ﻿using Framework.Win.Base;
 using InhospitalIndicators.Service.Entitys;
 using InhospitalIndicators.Service.Infrastructure;
+using InhospitalIndicators.Service.ValueObject;
+using InhospitalIndicators.Service.Views.FilterItems.Interfaces;
 using InhospitalIndicators.Service.Views.Interfaces;
 using Microsoft.Reporting.WinForms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -40,11 +43,12 @@ namespace InhospitalIndicators.Service.Views
             {
 
                 var c = FilterHelper.Convert(r);
-                c.Top = yIndex * 40+15;
-                c.Left = 360*index+ 80;
+                c.Top = yIndex * 40+5;
+                c.Left = 280*index+ 15;
+                (c as ICanSetFilterInfo).DoSetFilterInfo(r);
                 panel_filter.Controls.Add(c);
                 index++;
-                if (index%4==0&&index!=0)
+                if (index%3==0&&index!=0)
                 {
                     yIndex++;
                     index = 0;
@@ -64,7 +68,7 @@ namespace InhospitalIndicators.Service.Views
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            new frmFilterSetting().ShowDialog();
+            this.FindForm().Close();
         }
 
         protected byte[] AuthGetFileData(string fileUrl)
@@ -109,8 +113,19 @@ namespace InhospitalIndicators.Service.Views
 
         public string DoExport()
         {
-            return "hahha";
-            //panel_filter.Controls.
+            var filters = new List<FilterValueObject>();
+            foreach (var item in panel_filter.Controls)
+            {
+                filters.Add((item as ICanGetFilter).GetFilter());
+            }
+
+            return JsonConvert.SerializeObject(filters); 
+            
+        }
+
+        private void btn_filter_setting_Click(object sender, EventArgs e)
+        {
+            new frmFilterSetting().ShowDialog();
         }
     }
 }

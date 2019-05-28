@@ -1,4 +1,5 @@
 ﻿using InhospitalIndicators.Service.Entitys;
+using InhospitalIndicators.Service.ValueObject;
 using InhospitalIndicators.Service.Views.FilterItems.Interfaces;
 
 namespace InhospitalIndicators.Service.Views.FilterItems
@@ -19,6 +20,11 @@ namespace InhospitalIndicators.Service.Views.FilterItems
         {
             base.DoSetFilterInfo(entity);
 
+        }
+
+        public override FilterValueObject GetFilter()
+        {
+            return new FilterValueObject { Key = ParamName,Value=cmb_value.Text };
         }
     }
 }

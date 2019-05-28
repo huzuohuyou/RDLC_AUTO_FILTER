@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1459FD1-49CA-441A-BA87-516C80DA9163}</ProjectGuid>
+    <ProjectGuid>{F1271711-CF83-405F-9070-023F94924D10}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>InhospitalIndicators.Service</RootNamespace>
     <AssemblyName>In-hospital Indicators.Service</AssemblyName>
@@ -115,6 +115,7 @@
     <Compile Include="Services\PathologyService.cs" />
     <Compile Include="ValueObject\EnumControlType.cs" />
     <Compile Include="ValueObject\EnumDataType.cs" />
+    <Compile Include="ValueObject\FilterValueObject.cs" />
     <Compile Include="ValueObject\ListItem.cs" />
     <Compile Include="Views\BaseFilterForm.cs">
       <SubType>Form</SubType>
@@ -173,6 +174,7 @@
     <Compile Include="ValueObject\SPI_PROJECT.cs" />
     <Compile Include="ValueObject\TE_PROJECT.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanExportMyValue.cs" />
+    <Compile Include="Views\FilterItems\Interfaces\ICanGetFilter.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanSetDataSource.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanSetFilterInfo.cs" />
     <Compile Include="Views\FilterItems\UcBaseFilter.cs">

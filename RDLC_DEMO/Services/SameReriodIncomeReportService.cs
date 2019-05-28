@@ -45,6 +45,7 @@ namespace InhospitalIndicators.Service
             try
             {
                 var s = param?.DoExport();
+                return new List<SamePeriodIncomRatio>();
                 List<FeeItem> items = null;
                 if (flag == "all")
                 {

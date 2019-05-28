@@ -35,7 +35,7 @@
             // 
             this.dtp_value.CustomFormat = "yyyy-MM-dd";
             this.dtp_value.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_value.Location = new System.Drawing.Point(138, 7);
+            this.dtp_value.Location = new System.Drawing.Point(138, 6);
             this.dtp_value.Name = "dtp_value";
             this.dtp_value.Size = new System.Drawing.Size(200, 28);
             this.dtp_value.TabIndex = 2;

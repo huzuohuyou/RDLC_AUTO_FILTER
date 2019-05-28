@@ -95,7 +95,7 @@
             this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.button3 = new System.Windows.Forms.Button();
+            this.配置 = new System.Windows.Forms.Button();
             this.btn_query = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -915,16 +915,15 @@
             this.reportViewer4.Size = new System.Drawing.Size(984, 401);
             this.reportViewer4.TabIndex = 0;
             // 
-            // button3
+            // 配置
             // 
-            this.button3.Location = new System.Drawing.Point(685, 561);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.配置.Location = new System.Drawing.Point(685, 561);
+            this.配置.Name = "配置";
+            this.配置.Size = new System.Drawing.Size(97, 34);
+            this.配置.TabIndex = 0;
+            this.配置.Text = "配置";
+            this.配置.UseVisualStyleBackColor = true;
+            this.配置.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_query
             // 
@@ -942,7 +941,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.配置);
             this.Controls.Add(this.btn_query);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -1050,7 +1049,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker7;
         private System.Windows.Forms.DateTimePicker dateTimePicker8;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button 配置;
         private System.Windows.Forms.Button btn_query;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox4;

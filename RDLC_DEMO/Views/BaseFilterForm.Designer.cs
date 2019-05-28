@@ -113,7 +113,7 @@
             this.btn_filter_setting.TabIndex = 1;
             this.btn_filter_setting.Text = "过滤条件";
             this.btn_filter_setting.UseVisualStyleBackColor = true;
-            this.btn_filter_setting.Click += new System.EventHandler(this.btn_close_Click);
+            this.btn_filter_setting.Click += new System.EventHandler(this.btn_filter_setting_Click);
             // 
             // BaseFilterForm
             // 

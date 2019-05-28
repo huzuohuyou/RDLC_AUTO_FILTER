@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using InhospitalIndicators.Service.Entitys;
+using InhospitalIndicators.Service.ValueObject;
 using InhospitalIndicators.Service.Views.FilterItems.Interfaces;
-using InhospitalIndicators.Service.Entitys;
+using System;
+using System.Windows.Forms;
 
 namespace InhospitalIndicators.Service.Views.FilterItems
 {
-    public partial class UcBaseFilter : UserControl, ICanSetFilterInfo
+    public partial class UcBaseFilter : UserControl, ICanGetFilter,ICanSetFilterInfo
     {
         public string ParamName { get; set; }
 
@@ -21,6 +15,11 @@ namespace InhospitalIndicators.Service.Views.FilterItems
         public UcBaseFilter()
         {
             InitializeComponent();
+        }
+
+        public virtual FilterValueObject GetFilter()
+        {
+            throw new Exception("未实现");
         }
 
         public virtual void DoSetFilterInfo(FilterEntity entity)

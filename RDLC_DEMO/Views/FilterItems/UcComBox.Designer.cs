@@ -34,7 +34,7 @@
             // 
             // lb_text
             // 
-            this.lb_text.Location = new System.Drawing.Point(13, 10);
+            this.lb_text.Location = new System.Drawing.Point(13, 9);
             this.lb_text.Name = "lb_text";
             this.lb_text.Size = new System.Drawing.Size(100, 23);
             this.lb_text.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             this.cmb_value.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_value.FormattingEnabled = true;
-            this.cmb_value.Location = new System.Drawing.Point(141, 8);
+            this.cmb_value.Location = new System.Drawing.Point(141, 7);
             this.cmb_value.Name = "cmb_value";
             this.cmb_value.Size = new System.Drawing.Size(200, 26);
             this.cmb_value.TabIndex = 1;

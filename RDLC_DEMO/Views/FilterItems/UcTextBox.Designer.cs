@@ -42,7 +42,7 @@
             // 
             // tb_value
             // 
-            this.tb_value.Location = new System.Drawing.Point(141, 7);
+            this.tb_value.Location = new System.Drawing.Point(141, 6);
             this.tb_value.Name = "tb_value";
             this.tb_value.Size = new System.Drawing.Size(200, 28);
             this.tb_value.TabIndex = 2;
