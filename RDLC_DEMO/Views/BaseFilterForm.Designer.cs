@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel_filter = new System.Windows.Forms.Panel();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -71,9 +71,9 @@
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = null;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = null;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "InhospitalIndicators.Service.Reports.CurrentPeriod.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 0);
             this.reportViewer2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -85,9 +85,9 @@
             // btn_query
             // 
             this.btn_query.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_query.Location = new System.Drawing.Point(837, 555);
+            this.btn_query.Location = new System.Drawing.Point(875, 564);
             this.btn_query.Name = "btn_query";
-            this.btn_query.Size = new System.Drawing.Size(137, 46);
+            this.btn_query.Size = new System.Drawing.Size(97, 34);
             this.btn_query.TabIndex = 1;
             this.btn_query.Text = "查询";
             this.btn_query.UseVisualStyleBackColor = true;
@@ -96,9 +96,9 @@
             // btn_close
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.Location = new System.Drawing.Point(674, 555);
+            this.btn_close.Location = new System.Drawing.Point(772, 564);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(137, 46);
+            this.btn_close.Size = new System.Drawing.Size(97, 34);
             this.btn_close.TabIndex = 1;
             this.btn_close.Text = "关闭";
             this.btn_close.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // btn_filter_setting
             // 
             this.btn_filter_setting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_filter_setting.Location = new System.Drawing.Point(508, 555);
+            this.btn_filter_setting.Location = new System.Drawing.Point(654, 564);
             this.btn_filter_setting.Name = "btn_filter_setting";
-            this.btn_filter_setting.Size = new System.Drawing.Size(137, 46);
+            this.btn_filter_setting.Size = new System.Drawing.Size(112, 34);
             this.btn_filter_setting.TabIndex = 1;
             this.btn_filter_setting.Text = "过滤条件";
             this.btn_filter_setting.UseVisualStyleBackColor = true;
@@ -123,6 +123,8 @@
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_query);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = true;
             this.Name = "BaseFilterForm";
             this.Text = "BaseFilterForm";
             this.Load += new System.EventHandler(this.BaseFilterForm_Load);

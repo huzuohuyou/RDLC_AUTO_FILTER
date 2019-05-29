@@ -917,7 +917,7 @@
             // 
             // 配置
             // 
-            this.配置.Location = new System.Drawing.Point(685, 561);
+            this.配置.Location = new System.Drawing.Point(777, 561);
             this.配置.Name = "配置";
             this.配置.Size = new System.Drawing.Size(97, 34);
             this.配置.TabIndex = 0;
@@ -928,7 +928,7 @@
             // btn_query
             // 
             this.btn_query.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_query.Location = new System.Drawing.Point(863, 562);
+            this.btn_query.Location = new System.Drawing.Point(879, 561);
             this.btn_query.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_query.Name = "btn_query";
             this.btn_query.Size = new System.Drawing.Size(97, 34);

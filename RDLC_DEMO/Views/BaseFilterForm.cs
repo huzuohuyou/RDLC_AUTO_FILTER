@@ -45,7 +45,7 @@ namespace InhospitalIndicators.Service.Views
                 var c = FilterHelper.Convert(r);
                 c.Top = yIndex * 40+5;
                 c.Left = 280*index+ 15;
-                (c as ICanSetFilterInfo).DoSetFilterInfo(r);
+                (c as ICanSetGetFilterInfo).SetFilterInfo(r);
                 panel_filter.Controls.Add(c);
                 index++;
                 if (index%3==0&&index!=0)
@@ -125,7 +125,7 @@ namespace InhospitalIndicators.Service.Views
 
         private void btn_filter_setting_Click(object sender, EventArgs e)
         {
-            new frmFilterSetting().ShowDialog();
+            new FrmFilterSetting().ShowDialog();
         }
     }
 }

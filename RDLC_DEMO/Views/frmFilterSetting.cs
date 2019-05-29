@@ -1,15 +1,20 @@
 ﻿using Framework.Win.Base;
+using InhospitalIndicators.Service.Entitys;
+using InhospitalIndicators.Service.Services.System;
+using InhospitalIndicators.Service.Services.System.Interfaces;
 using InhospitalIndicators.Service.Views.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace InhospitalIndicators.Service.Views
 {
-    public partial class frmFilterSetting : PageForm, ICanAddRemoveUc
+    public partial class FrmFilterSetting : PageForm, ICanAddRemoveUc
     {
+        ICanSaveFilters service =new ICanSaveFiltersImplemet();
         int xIndex = 0,yIndex=0;
 
-        public frmFilterSetting()
+        public FrmFilterSetting()
         {
             InitializeComponent();
         }
@@ -23,7 +28,7 @@ namespace InhospitalIndicators.Service.Views
             }
             var control = uc as Control;
             control.Top = yIndex * 200 + 15;
-            control.Left = xIndex * 420 + 15;
+            control.Left = xIndex * 410 + 5;
             panel_filter.Controls.Add(control);
             xIndex++;
             if (xIndex % 2 == 0 && xIndex != 0)
@@ -45,6 +50,16 @@ namespace InhospitalIndicators.Service.Views
             {
                 DoAdd(new ucFilter(this));
             }
+        }
+
+        private void btn_save_filter_Click(object sender, EventArgs e)
+        {
+            var list = new List<FilterEntity>();
+            foreach (var item in panel_filter.Controls)
+            {
+                list.Add((item as ucFilter).Item);
+            }
+            service.SaveFilter(list,"demo");
         }
 
         public void ReFreshUc()

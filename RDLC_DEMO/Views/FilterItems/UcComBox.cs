@@ -4,7 +4,7 @@ using InhospitalIndicators.Service.Views.FilterItems.Interfaces;
 
 namespace InhospitalIndicators.Service.Views.FilterItems
 {
-    public partial class UcComBox : UcBaseFilter, ICanSetFilterInfo, ICanExportMyValue
+    public partial class UcComBox : UcBaseFilter, ICanSetGetFilterInfo, ICanExportMyValue
     {
         public UcComBox()
         {
@@ -16,11 +16,13 @@ namespace InhospitalIndicators.Service.Views.FilterItems
             return cmb_value.Text;
         }
 
-        public override void DoSetFilterInfo(FilterEntity entity)
+        public override void SetFilterInfo(FilterEntity entity)
         {
-            base.DoSetFilterInfo(entity);
+            base.SetFilterInfo(entity);
 
         }
+
+        
 
         public override FilterValueObject GetFilter()
         {

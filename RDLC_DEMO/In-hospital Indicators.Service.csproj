@@ -39,6 +39,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Controls Library">
       <HintPath>..\..\..\WorkSpace\EIP 3.0\packages\Controls Library.dll</HintPath>
     </Reference>
@@ -112,7 +115,11 @@
     <Compile Include="ReportFrm.Designer.cs">
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Services\PathologyService.cs" />
+    <Compile Include="Services\Business\PathologyService.cs" />
+    <Compile Include="Services\System\Interfaces\ICanSaveFilters.cs" />
+    <Compile Include="Services\System\ICanSaveFiltersImplemet.cs" />
+    <Compile Include="Services\System\Interfaces\ICanSaveRdlcs.cs" />
+    <Compile Include="Services\System\Interfaces\ICanSaveSqls.cs" />
     <Compile Include="ValueObject\EnumControlType.cs" />
     <Compile Include="ValueObject\EnumDataType.cs" />
     <Compile Include="ValueObject\FilterValueObject.cs" />
@@ -138,14 +145,6 @@
     <Compile Include="Entitys\ThirtyEightFee.cs" />
     <Compile Include="Entitys\WorkloadChangeandWeight.cs" />
     <Compile Include="Infrastructure\Expand.cs" />
-    <Compile Include="DataSets\DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSets\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\FilterHelper.cs" />
     <Compile Include="Infrastructure\ICanLoadFilter.cs" />
     <Compile Include="MainForm.cs">
@@ -167,16 +166,16 @@
     <Compile Include="Manager\IManager.cs" />
     <Compile Include="Manager\CurrentPeriod\InItem.cs" />
     <Compile Include="Manager\CurrentPeriod\OutItem.cs" />
-    <Compile Include="Services\WorkloadWeightReportService.cs" />
-    <Compile Include="Services\SameReriodIncomeReportService.cs" />
+    <Compile Include="Services\Business\WorkloadWeightReportService.cs" />
+    <Compile Include="Services\Business\SameReriodIncomeReportService.cs" />
     <Compile Include="Manager\DbContext.cs" />
-    <Compile Include="Services\ThirtyEightFeeReportService.cs" />
+    <Compile Include="Services\Business\ThirtyEightFeeReportService.cs" />
     <Compile Include="ValueObject\SPI_PROJECT.cs" />
     <Compile Include="ValueObject\TE_PROJECT.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanExportMyValue.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanGetFilter.cs" />
     <Compile Include="Views\FilterItems\Interfaces\ICanSetDataSource.cs" />
-    <Compile Include="Views\FilterItems\Interfaces\ICanSetFilterInfo.cs" />
+    <Compile Include="Views\FilterItems\Interfaces\ICanSetGetFilterInfo.cs" />
     <Compile Include="Views\FilterItems\UcBaseFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,11 +200,11 @@
     <Compile Include="Views\FilterItems\UcTextBox.Designer.cs">
       <DependentUpon>UcTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmFilterSetting.cs">
+    <Compile Include="Views\FrmFilterSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmFilterSetting.Designer.cs">
-      <DependentUpon>frmFilterSetting.cs</DependentUpon>
+    <Compile Include="Views\FrmFilterSetting.Designer.cs">
+      <DependentUpon>FrmFilterSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Interfaces\IamUc.cs" />
     <Compile Include="Views\Interfaces\ICanAddUc.cs" />
@@ -255,6 +254,9 @@
     <EmbeddedResource Include="Views\Demo.resx">
       <DependentUpon>Demo.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="App_Data\Filters\TextFile1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\Logs\TextFile1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -278,23 +280,12 @@
     <EmbeddedResource Include="Views\FilterItems\UcTextBox.resx">
       <DependentUpon>UcTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmFilterSetting.resx">
-      <DependentUpon>frmFilterSetting.cs</DependentUpon>
+    <EmbeddedResource Include="Views\FrmFilterSetting.resx">
+      <DependentUpon>FrmFilterSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucFilter.resx">
       <DependentUpon>ucFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSets\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSets\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="DataSets\WorkloadChangeandWeight.xsc">
       <DependentUpon>WorkloadChangeandWeight.xsd</DependentUpon>
     </None>

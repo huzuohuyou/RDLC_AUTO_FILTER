@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace InhospitalIndicators.Service.Views.FilterItems
 {
-    public partial class UcBaseFilter : UserControl, ICanGetFilter,ICanSetFilterInfo
+    public partial class UcBaseFilter : UserControl, ICanGetFilter,ICanSetGetFilterInfo
     {
+        FilterEntity entity;
         public string ParamName { get; set; }
 
         public decimal OrderNo  { get; set; }
@@ -22,11 +23,17 @@ namespace InhospitalIndicators.Service.Views.FilterItems
             throw new Exception("未实现");
         }
 
-        public virtual void DoSetFilterInfo(FilterEntity entity)
+        public virtual void SetFilterInfo(FilterEntity _entity)
         {
+            entity = _entity;
             lb_text.Text = entity.ParamLabel;
             ParamName = entity.ParamName;
             OrderNo = entity.OrderNo;
         }
+
+        //public virtual FilterEntity GetFilterInfo()
+        //{
+        //    return entity;
+        //}
     }
 }
